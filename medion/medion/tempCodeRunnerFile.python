@@ -1,9 +1,0 @@
-import sqlite3
-sqliteConnection = sqlite3.connect('Medicine_Data.db')
-cursor = sqliteConnection.cursor()
-
-# q1="""insert into Medicine(id,name,cost,url) values(10,"Warfin",83.39,"https://careformulationlabs.com/product/warfarin-5/")"""
-q1="""update Medicine set url="https://careformulationlabs.com/wp-content/uploads/2021/03/56e4e41c346c5971635c68f8be553f10_thumb.png" where id=10;"""
-cursor.execute(q1)
-sqliteConnection.commit()
-cursor.close()
